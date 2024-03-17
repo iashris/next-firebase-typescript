@@ -28,11 +28,12 @@ const SideNavHeader = () => {
 
   return (
     <div className="flex items-center ml-2 pb-8">
-      <Link href="/">
-        <a className="text-xl font-bold no-underline text-blue-50 hover:text-blue-100">
-          <LogoSvg width="2.5rem" height="2.5rem" className="inline" />
-          {!collapsed && <div className="inline ml-2">My App</div>}
-        </a>
+      <Link
+        href="/"
+        className="text-xl font-bold no-underline text-blue-50 hover:text-blue-100"
+      >
+        <LogoSvg width="2.5rem" height="2.5rem" className="inline" />
+        {!collapsed && <div className="inline ml-2">My App</div>}
       </Link>
     </div>
   );
@@ -56,11 +57,12 @@ const SideNavFooter = ({ setExpanded }: sideNavFooterProps) => {
   const collapsed = useContext(CollapsedContext);
   return (
     <>
-      <Link href="/settings">
-        <a className="flex ml-1 items-end mt-auto px-1 no-underline text-blue-50 opacity-70 hover:opacity-100">
-          <Svg.CogSvg />
-          {!collapsed && <div className="pl-2">Settings</div>}
-        </a>
+      <Link
+        href="/settings"
+        className="flex ml-1 items-end mt-auto px-1 no-underline text-blue-50 opacity-70 hover:opacity-100"
+      >
+        <Svg.CogSvg />
+        {!collapsed && <div className="pl-2">Settings</div>}
       </Link>
       <a
         href=""
@@ -68,7 +70,7 @@ const SideNavFooter = ({ setExpanded }: sideNavFooterProps) => {
         onClick={signOut}
       >
         <Svg.SignOutSvg />
-        {!collapsed && <div className="pl-2">Sign Out</div>}
+        {!collapsed && <p className="pl-2">Sign Out</p>}
       </a>
       <hr></hr>
       <div className="flex pt-2">

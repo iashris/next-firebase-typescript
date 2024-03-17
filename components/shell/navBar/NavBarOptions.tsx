@@ -60,15 +60,14 @@ type NavItemProps = {
 const NavItem = ({ link, svgIcon, title, expanded = true }: NavItemProps) => {
   const router = useRouter();
   return (
-    <Link href={link}>
-      <a
-        className={`flex items-center no-underline text-blue-50 hover:text-blue-100 p-3 rounded-md ${
-          isActivePage(link, router.pathname) ? "bg-indigo-800" : ""
-        }`}
-      >
-        {svgIcon}
-        {expanded && <div className="font-bold pl-3">{title}</div>}
-      </a>
+    <Link
+      href={link}
+      className={`flex items-center no-underline text-blue-50 hover:text-blue-100 p-3 rounded-md ${
+        isActivePage(link, router.pathname) ? "bg-indigo-800" : ""
+      }`}
+    >
+      {svgIcon}
+      {expanded && <div className="font-bold pl-3">{title}</div>}
     </Link>
   );
 };

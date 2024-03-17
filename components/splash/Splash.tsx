@@ -28,11 +28,9 @@ export default function Splash() {
               </div>
 
               <Link href="/login">
-                <a>
-                  <button className="bg-blue-300 hover:bg-indigo-800 text-white font-bold py-2 px-4 rounded-full">
-                    Sign in
-                  </button>
-                </a>
+                <button className="bg-blue-300 hover:bg-indigo-800 text-white font-bold py-2 px-4 rounded-full">
+                  Sign in
+                </button>
               </Link>
             </div>
           </div>
@@ -50,7 +48,7 @@ export default function Splash() {
           </div>
 
           <div className="w-full xl:w-3/5 py-6 xl:pl-48 overflow-y-hidden">
-            <Image src={hero} />
+            <Image src={hero} alt="hero" />
           </div>
           <footer>
             <div className="w-full pt-16 pb-6 text-sm text-center md:text-left fade-in">
